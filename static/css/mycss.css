@@ -1,0 +1,29 @@
+.mui-slider-item,img{
+	height: 80px;
+}
+table{
+	width: 250px;
+	height:50px;
+}
+th{
+	background: yellow;
+}
+td{
+	background: #CCCCCC;
+}
+#mytd{
+	background: gray;
+}
+.mytds{
+	background: green;
+}
+.mui-slider{
+	padding-bottom: 20px;
+}
+#panel2{
+	width:500px;
+}
+.mui-switch{
+	margin-left: 80%;
+	margin-top: 5px;
+}

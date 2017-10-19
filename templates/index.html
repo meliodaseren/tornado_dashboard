@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head lang="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="{{static_url('css/bootstrap.min.css')}}"/> -->
+    <link rel="stylesheet" href="{{static_url('css/mui.min.css')}}"/>
+    <link rel="stylesheet" href="{{static_url('css/mycss.css')}}"/>
+    <link rel="stylesheet" href="{{static_url('css/index.css')}}"/>
+
+    <script src="{{static_url('js/jquery-3.1.min.js')}}"></script>
+    <script src="{{static_url('js/mui.min.js')}}"></script>
+    <script src="{{static_url('js/myjs.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> 
+
+    <!-- <script src="{{static_url('js/Chart.bundle.min.js')}}"></script>
+    <script src="{{static_url('js/utils.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+    <script src="{{static_url('js/bootstrap.min.js')}}"></script> -->
+
+    <style>
+      canvas{
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+      }    
+
+        .main {
+             
+            background-color: #fff;
+            /*width: 90%;*/
+            /*padding-bottom: 90%;*/
+        }
+
+        .main>div {
+            /*width: 10%;*/
+            /*padding-bottom: 20%;*/
+            border: 1% solid #fff;         
+            /*background-color: #E78326;*/
+            border-radius: 3%;
+            float: left;
+            margin: 1%;
+        }
+    </style>
+
+<!--     <script language="JavaScript">
+      function displayLineChart() {
+        var data = {
+            labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            datasets: [
+                {
+                    label: "Prime and Fibonacci",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+                },
+                {
+                    label: "My Second dataset",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+                }
+            ]
+        };
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var options = { };
+        var lineChart = new Chart(ctx).Line(data, options);
+      }
+    </script> -->
+  </head>
+
+  <body onload="displayLineChart();">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Statistics</a>
+        <div class="dropdown-content">
+          <a href="/power">Power BI </a>
+          <a href="/line">Link 2</a>
+          <a href="/bars">Link 3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Table</a>
+        <div class="dropdown-content">
+          <a href="/table">Table</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>  
+      <li><a href="#news">About</a></li>
+    </ul>
+
+    <div class='content'>
+      <div class="main clearfix">
+        <div class="box1">
+          <canvas id="mypie" width="300" height="300"></canvas>
+        </div>
+        <div class="box1">
+          <canvas id="mypie1" width="300" height="300"></canvas>
+        </div>
+        <div class="box1">
+          <canvas id="mypie2" width="300" height="300"></canvas>
+        </div>
+        <div class="box1">
+          <canvas id="mypie3" width="300" height="300"></canvas>
+        </div>
+        <div class="box">
+          <canvas id="lineChart" width="800" height="300"></canvas>
+        </div>
+        <div>
+          <canvas id="bar-chart" width="400" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var data = [
+          {value: 300,color:"#F38630"},
+          {value : 5,color:"#E0E4CC"},
+          {value : 2,color : "#69D2E7"}
+      ];
+      var ctx = document.getElementById("mypie").getContext("2d");
+      var myNewChart = new Chart(ctx).Pie(data);
+    </script>
+
+    <script>
+      var data = [
+          {value: 19,color:"#F38630"},
+          {value : 6,color:"#E0E4CC"},
+          {value : 40,color : "#69D2E7"}
+      ];
+      var ctx = document.getElementById("mypie1").getContext("2d");
+      var myNewChart = new Chart(ctx).Pie(data);
+    </script>
+
+    <script>
+      var data = [
+          {value: 30,color:"#F38630"},
+          {value : 50,color:"#E0E4CC"},
+          {value : 100,color : "#69D2E7"}
+      ];
+      var ctx = document.getElementById("mypie2").getContext("2d");
+      var myNewChart = new Chart(ctx).Pie(data);
+    </script>
+
+    <script>
+      var data = [
+          {value: 300,color:"#F38630"},
+          {value : 90,color:"#E0E4CC"},
+          {value : 100,color : "#69D2E7"}
+      ];
+      var ctx = document.getElementById("mypie3").getContext("2d");
+      var myNewChart = new Chart(ctx).Pie(data);
+    </script>
+
+    <script>
+    var dData = function() {
+        return Math.round(Math.random() * 90) + 10
+    };
+
+    var barChartData = {
+        labels: ["dD 1", "dD 2", "dD 3", "dD 4", "dD 5", "dD 6", "dD 7", "dD 8", "dD 9", "dD 10"],
+        datasets: [{
+            fillColor: "rgba(0,60,100,1)",
+            strokeColor: "black",
+            data: [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()]
+        }]
+    }
+
+    var index = 11;
+    var ctx = document.getElementById("bar-chart").getContext("2d");
+    var barChartDemo = new Chart(ctx).Bar(barChartData, {
+        responsive: true,
+        barValueSpacing: 2
+    });
+    setInterval(function() {
+        barChartDemo.removeData();
+        barChartDemo.addData([dData()], "dD " + index);
+        index++;
+    }, 3000);
+    </script>
+    
+  </body>
+</html>
